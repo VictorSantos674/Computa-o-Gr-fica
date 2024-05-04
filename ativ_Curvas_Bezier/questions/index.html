@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curva de Bézier</title>
+</head>
+<body>
+  <canvas id="bezierCanvas" width="400" height="400"></canvas>
+  <script>
+    var canvas = document.getElementById("bezierCanvas");
+    var ctx = canvas.getContext("2d");
+
+    function drawBezierCurve() {
+      var t, x, y;
+      ctx.beginPath();
+      ctx.moveTo(0, 200);
+      for (t = 0; t <= 1; t += 0.01) {
+        x = 3*Math.pow(1-t, 2)*t + 9*(1-t)*Math.pow(t, 2) + 4*Math.pow(t, 3);
+        y = 2*Math.pow(1-t, 3) - 6*Math.pow(1-t, 2)*t + 3*Math.pow(t, 3);
+        ctx.lineTo(x * 50, 200 - y * 50); // Ajuste de escala para melhor visualização
+      }
+      ctx.stroke();
+    }
+
+    drawBezierCurve();
+  </script>
+</body>
+</html>
