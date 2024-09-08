@@ -1,4 +1,2 @@
 # Computacao-Grafica
-Repositório da disciplina de Computação Gráfica
-
-Aqui estarão alguns códigos feitos nessa disciplina
+Repositório pessoal com projetos feitos em grupo e individuais conhecendo a Computação Gráfica
